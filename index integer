@@ -1,0 +1,11 @@
+def sum_of_distinct_counts(nums):
+    result = 0
+    for i in range(len(nums)):
+        for j in range(i, len(nums)):
+            distinct_count = len(set(nums[i:j+1]))
+            result += distinct_count ** 2
+    return result
+nums1 = [1, 2, 1]
+print(sum_of_distinct_counts(nums1)) 
+nums2 = [1, 1]
+print(sum_of_distinct_counts(nums2))  
