@@ -1,0 +1,17 @@
+def large_group_positions(s):
+    result = []
+    i = 0
+    n = len(s)
+
+    while i < n:
+        j = i
+        while j < n and s[j] == s[i]:
+            j += 1
+        if j - i >= 3:
+            result.append([i, j - 1])
+        i = j
+    return result
+s1 = "abbxxxxzzy"
+s2 = "abc"
+print(large_group_positions(s1))  
+print(large_group_positions(s2))  
