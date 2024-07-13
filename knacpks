@@ -1,0 +1,15 @@
+items = 3
+weights = [2, 3, 1]
+values = [4, 5, 3]
+capacity = 4
+max_value = 0
+best_set = []
+for i in range(2**items):
+    selected_items = [j for j in range(items) if (i & (1 << j))]
+    total_weight = sum(weights[j] for j in selected_items)
+    total_val = sum(values[j] for j in selected_items)
+    if total_weight <= capacity and total_val > max_value:
+        max_value = total_val
+        best_set = selected_items
+print("Best set of items:", best_set)
+print("Total value:", max_value)
