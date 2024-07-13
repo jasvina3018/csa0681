@@ -1,0 +1,6 @@
+arr = [2, 4, 6, 8, 10, 12, 14, 18]
+             min_val = arr[0]
+max_val = arr[-1]
+             print(f"Min = {min_val}, Max = {max_val}")
+
+
