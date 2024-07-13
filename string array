@@ -1,0 +1,3 @@
+words = ["mass", "as", "hero", "superhero"]
+output = [word for word in words if any(word in other_word for other_word in words if word != other_word)]
+print(output)
